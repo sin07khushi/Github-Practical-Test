@@ -37,3 +37,8 @@ navItems.forEach(function(item) {
     });
 
 });
+
+// Automatic Copyright Year
+const currentYear = document.getElementById("currentYear");
+
+currentYear.textContent = new Date().getFullYear();
