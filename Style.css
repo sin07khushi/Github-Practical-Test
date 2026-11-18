@@ -1,7 +1,14 @@
+
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
 }
 
 body {
@@ -11,20 +18,116 @@ body {
     line-height: 1.6;
 }
 
+/* Navbar */
+.navbar {
+    background-color: #573838;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #e5a47e;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e5a47e;
+}
+
+/* Contact Link */
+.nav-links .contact-link {
+    background-color: #e5a47e;
+    color: #493c3c;
+    padding: 9px 20px;
+    border-radius: 5px;
+}
+
+.nav-links .contact-link:hover {
+    background-color: white;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+}
+
+/* Header */
 header {
     background-color: #573838;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 70px 20px;
 }
 
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    margin: 30px auto;
+    padding: 35px;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
 
 h2 {
     color: #9c5631;
     margin-bottom: 15px;
 }
 
-button {
+/* Skills */
+#skills ul {
+    padding-left: 25px;
+}
+
+#skills li {
+    margin: 8px 0;
+}
+
+/* Contact Button */
+#contactBtn {
     background-color: #983131;
     color: white;
     border: none;
@@ -32,4 +135,47 @@ button {
     margin-top: 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+#contactBtn:hover {
+    background-color: #573838;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: #573838;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    section {
+        margin: 20px;
+        padding: 25px;
+    }
 }

@@ -1,21 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khushi | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
-    <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">Khushi<span>.</span></a>
+
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact" class="contact-link">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
         <h1>Khushi Singh</h1>
+        <p>Computer Science Student | Aspiring Developer</p>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! I am Khushi Singh. A Computer Science student at ALTA School of Technology, Pune.</p>
         <p>I am passionate about web development and programming.</p>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2>My Skills</h2>
         <ul>
@@ -27,14 +56,14 @@
         </ul>
     </section>
 
-
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Email: sin07khushi@gmail.com</p>
         <button id="contactBtn">Say Hello</button>
     </section>
 
-
     <script src="script.js"></script>
+
 </body>
 </html>
